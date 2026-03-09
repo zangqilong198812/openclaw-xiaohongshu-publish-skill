@@ -1,25 +1,27 @@
 # openclaw-xiaohongshu-publish-skill
 
-OpenClaw Skill: 使用浏览器发布小红书笔记（图文/视频）
+OpenClaw Skill: 使用浏览器发布小红书笔记
 
-## 使用前提
+## 目录结构
 
-1. 创建账号信息 `~/xiaohongshu-account.md`
-2. 创建素材信息 `~/xiaohongshu-resource.md`
-3. 首次用 OpenClaw 浏览器登录小红书一次
+每个账号一个文件夹 `~/xiaohongshu-<账号名>/`：
 
-## 首次登录
-
-```bash
-openclaw browser --browser-profile openclaw open https://www.xiaohongshu.com/
+```
+~/xiaohongshu-meizhuang/
+├── account.md      # 账号信息
+├── resource.md     # 素材列表
+├── resources/      # 素材文件
+│   ├── img1.jpg
+│   └── video1.mp4
+└── history.md      # 发布历史（自动生成）
 ```
 
 ## 文件模板
 
-### ~/xiaohongshu-account.md
+### account.md
 
 ```markdown
-# 小红书账号信息
+# 账号信息
 
 ## 账号定位
 [如：美妆博主]
@@ -30,34 +32,36 @@ openclaw browser --browser-profile openclaw open https://www.xiaohongshu.com/
 ## 内容风格
 [如：温柔亲切]
 
-## 产品/服务（可选）
+## 产品/服务
 [描述]
 
 ## 其他要求
-- 禁止出现的词汇：xxx
-- 必须包含的关键词：xxx
+- 禁止：xxx
+- 必须：xxx
 ```
 
-### ~/xiaohongshu-resource.md
+### resource.md
 
 ```markdown
-# 小红书素材
+# 素材列表
 
 ## 素材1
 - 类型：图文 / 视频
-- 路径：~/images/xxx.jpg
+- 文件：img1.jpg
 - 描述：xxx
 
 ## 素材2
-- 类型：图文 / 视频
-- 路径：~/videos/xxx.mp4
+- 类型：视频
+- 文件：video1.mp4
 - 描述：xxx
 ```
 
-## 使用方式
+## 首次登录
 
-告诉 AI："帮我发布小红书"，AI 会读取素材列表，让你选择要发布哪条，确认后自动发布。
+```bash
+openclaw browser --browser-profile openclaw open https://www.xiaohongshu.com/
+```
 
-## 自动生成文件
+## 使用
 
-- `~/xiaohongshu-history.md` - 发布历史
+告诉 AI："发布小红书"，选择账号和素材，确认文案后自动发布。

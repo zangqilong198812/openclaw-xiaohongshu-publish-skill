@@ -5,7 +5,17 @@ OpenClaw Skill: 使用浏览器发布小红书笔记（图文/视频）
 ## 使用前提
 
 1. 创建账号信息文件 `~/xiaohongshu-account.md`（见下方模板）
-2. 首次使用先手动登录小红书网页版一次
+2. 用 OpenClaw 浏览器打开小红书，手动登录一次
+
+## 首次登录
+
+打开 OpenClaw 浏览器并登录小红书：
+
+```
+browser action=open profile=openclaw targetUrl=https://www.xiaohongshu.com/
+```
+
+登录后关闭浏览器即可，之后发布时无需再次登录。
 
 ## 账号信息模板
 

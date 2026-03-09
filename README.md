@@ -4,22 +4,19 @@ OpenClaw Skill: 使用浏览器发布小红书笔记（图文/视频）
 
 ## 使用前提
 
-1. 创建账号信息文件 `~/xiaohongshu-account.md`（见下方模板）
-2. 用 OpenClaw 浏览器打开小红书，手动登录一次
+1. 创建账号信息 `~/xiaohongshu-account.md`
+2. 创建素材信息 `~/xiaohongshu-resource.md`
+3. 首次用 OpenClaw 浏览器登录小红书一次
 
 ## 首次登录
-
-打开 OpenClaw 浏览器并登录小红书：
 
 ```bash
 openclaw browser --browser-profile openclaw open https://www.xiaohongshu.com/
 ```
 
-登录后关闭浏览器即可，之后发布时无需再次登录。
+## 文件模板
 
-## 账号信息模板
-
-创建 `~/xiaohongshu-account.md`：
+### ~/xiaohongshu-account.md
 
 ```markdown
 # 小红书账号信息
@@ -34,23 +31,33 @@ openclaw browser --browser-profile openclaw open https://www.xiaohongshu.com/
 [如：温柔亲切]
 
 ## 产品/服务（可选）
-[要推广的产品或服务描述]
+[描述]
 
 ## 其他要求
 - 禁止出现的词汇：xxx
 - 必须包含的关键词：xxx
 ```
 
+### ~/xiaohongshu-resource.md
+
+```markdown
+# 小红书素材
+
+## 素材1
+- 类型：图文 / 视频
+- 路径：~/images/xxx.jpg
+- 描述：xxx
+
+## 素材2
+- 类型：图文 / 视频
+- 路径：~/videos/xxx.mp4
+- 描述：xxx
+```
+
 ## 使用方式
 
-告诉 AI："帮我发布小红书"，然后按提示提供：
-- 图文还是视频？
-- 素材文件路径
-- 素材描述
+告诉 AI："帮我发布小红书"，AI 会读取素材列表，让你选择要发布哪条，确认后自动发布。
 
-AI 会自动生成文案，确认后帮你发布。
+## 自动生成文件
 
-## 文件说明
-
-- `~/xiaohongshu-account.md` - 账号信息（用户创建）
-- `~/xiaohongshu-history.md` - 发布历史（自动生成）
+- `~/xiaohongshu-history.md` - 发布历史

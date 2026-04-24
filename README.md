@@ -2,6 +2,8 @@
 
 OpenClaw Skill: 使用浏览器发布小红书笔记
 
+[点击在线体验](https://socialistic.ai/openclaw-xiaohongshu-publish-skill-c70ef8?utm_source=github_readme&utm_campaign=koc_skill_creator&utm_content=hyperlink)
+
 ## 目录结构
 
 每个账号一个文件夹 `~/xiaohongshu-<账号名>/`：
